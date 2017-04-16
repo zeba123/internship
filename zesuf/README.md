@@ -23,7 +23,7 @@ The Q&A app works just like Stack Overflow. You can mark a question as favorite,
 
 ## Technology Stack
 
-- Python 2.7 / 3.5
+- Python 2.7 
 - Django > 1.9
 - Twitter Bootstrap 3
 - jQuery 2
@@ -33,42 +33,33 @@ The Q&A app works just like Stack Overflow. You can mark a question as favorite,
 
 Installing and Running Zesuf
 
-1 Install Python 2.7 and Django Framework 1.9
+1. Install Python 2.7 and Django Framework 1.9
 
 Python 2.7.x https://www.python.org/downloads/
 
 Django 1.9.x https://docs.djangoproject.com/en/1.9/intro/install/
 
-2 Clone the repository
+2. Install dependencies
 
-Via https
-
-git clone https://github.com/vitorfs/bootcamp.git
-or via ssh
-
-git clone git@github.com:vitorfs/bootcamp.git
-3 Install dependencies
-
-On the project root there is a requirements.pip file. Make sure you install all the required dependencies before running Bootcamp
+On the project root there is a requirements.pip file. Make sure you install all the required dependencies before running zesuf
 
 pip install -U -r requirements.txt
 Note: If you are having problems with Pillow installation please take a look on a detailed installation guide at: http://pillow.readthedocs.org/en/latest/installation.html
 
-4 Python Decouple
+3. Python Decouple
 
 As the project uses python-decouple you will need to create a file named .env on the root of the project with three values, as following:
 
 DEBUG=True
 SECRET_KEY='mys3cr3tk3y'
-DATABASE_URL='postgres://u_bootcamp:p4ssw0rd@localhost:5432/bootcamp'
+DATABASE_URL='postgres://<POSTGRES USERNAME>:<POSTGRES PASSWORD>@localhost:5432/<DATABASE NAME>'
 Note: You can use Django methods to create a new SECRET_KEY https://github.com/django/django/blob/master/django/core/management/commands/startproject.py
+Note: I used postgres database, To use sqlite database set sqlite DATABASE_URL
 
-Note 2: To use sqlite on development environment you can change the DATABASE_URL to something like 'sqlite:////Users/vitorfs/Development/bootcamp/db.sqlite3
-
-5 Syncdb
+4. Syncdb
 
 python manage.py migrate
-6 Run
+5. Run
 
 python manage.py runserver
 
