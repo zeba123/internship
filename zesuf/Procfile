@@ -1,0 +1,1 @@
+web: gunicorn zesuf.wsgi --log-file -
