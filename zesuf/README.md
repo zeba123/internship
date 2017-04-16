@@ -23,7 +23,7 @@ The Q&A app works just like Stack Overflow. You can mark a question as favorite,
 
 ## Technology Stack
 
-- Python 2.7 
+- Python 2.7
 - Django > 1.9
 - Twitter Bootstrap 3
 - jQuery 2
@@ -52,7 +52,7 @@ As the project uses python-decouple you will need to create a file named .env on
 
 DEBUG=True
 SECRET_KEY='mys3cr3tk3y'
-DATABASE_URL='postgres://<POSTGRES USERNAME>:<POSTGRES PASSWORD>@localhost:5432/<DATABASE NAME>'
+DATABASE_URL='postgres://POSTGRES_USERNAME:POSTGRES_PASSWORD@localhost:5432/<DATABASE NAME>'
 Note: You can use Django methods to create a new SECRET_KEY https://github.com/django/django/blob/master/django/core/management/commands/startproject.py
 Note: I used postgres database, To use sqlite database set sqlite DATABASE_URL
 
@@ -62,5 +62,4 @@ python manage.py migrate
 5. Run
 
 python manage.py runserver
-
 
